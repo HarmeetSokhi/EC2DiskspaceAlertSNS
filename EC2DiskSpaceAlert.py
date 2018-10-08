@@ -72,7 +72,7 @@ def notify_via_sns(msg):
         message = {"message": msg}
         client = boto3.client('sns', region)
         response = client.publish(
-            TargetArn='arn:aws:sns:ap-southeast-2:959060754311:EC2-Ubuntu-EBS-Space',
+            TargetArn='SNS TOPIC NAME',
             Message=json.dumps({'default': json.dumps(message)}),
             MessageStructure='json'
         )
